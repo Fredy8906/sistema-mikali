@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Mikali Sede Simijaca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        principal: '#E63946',
+                        secundario: '#FFB703',
+                        oscuro: '#1D3557',
+                        claro: '#F1FAEE'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .sombra-suave {
+                box-shadow: 0 4px 15px rgba(230, 57, 70, 0.2);
+            }
+            .gradiente {
+                background: linear-gradient(135deg, #E63946 0%, #FF6B6B 100%);
+            }
+            .boton {
+                transition: all 0.3s ease;
+            }
+            .boton:hover {
+                transform: translateY(-3px);
+            }
+            .resaltado {
+                background: linear-gradient(135deg, #FFB703 0%, #FFD166 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-yellow-50 text-oscuro min-h-screen">
+
+    <header class="gradiente text-white py-6 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-2">
+                <i class="fa fa-cutlery"></i> Sistema Mikali Sede Simijaca
+            </h1>
+            <p class="opacity-90 text-lg">Sabor y calidad en cada plato | Tu mejor opción</p>
+            <span class="inline-block bg-white/20 px-4 py-2 rounded-full text-sm mt-3">
+                📍 Ubicación: Simijaca | 📞 Pedidos abiertos
+            </span>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8 -mt-8 relative z-10">
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <a href="#productos" class="boton bg-white rounded-2xl p-6 text-center sombra-suave cursor-pointer">
+                <i class="fa fa-th-large text-5xl text-principal mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Nuestros Productos</h3>
+                <p class="text-gray-600">Ver lo que ofrecemos</p>
+            </a>
+            <a href="#sopas" class="boton bg-white rounded-2xl p-6 text-center sombra-suave cursor-pointer">
+                <i class="fa fa-coffee text-5xl text-secundario mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Sopas del Día</h3>
+                <p class="text-gray-600">Conócenos nuestras preparaciones</p>
+            </a>
+            <a href="#promociones" class="boton bg-white rounded-2xl p-6 text-center sombra-suave cursor-pointer">
+                <i class="fa fa-tag text-5xl text-principal mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Promociones</h3>
+                <p class="text-gray-600">Ofertas especiales</p>
+            </a>
+        </section>
+
+        <section id="productos" class="bg-white rounded-2xl p-6 md:p-8 sombra-suave mb-10">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-principal mb-6 flex items-center gap-3">
+                <i class="fa fa-birthday-cake"></i> Nuestros Productos y Precios
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm md:text-base">
+                    <thead class="bg-principal text-white rounded-t-xl">
+                        <tr>
+                            <th class="p-4 text-left rounded-tl-xl">Producto</th>
+                            <th class="p-4 text-left">Descripción</th>
+                            <th class="p-4 text-right rounded-tr-xl">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-yellow-50 transition-colors">
+                            <td class="p-4 font-medium">Pollo Entero</td>
+                            <td class="p-4">Solo el pollo, sazonado y asado al punto</td>
+                            <td class="p-4 text-right font-bold">$34.000 <span class="text-gray-500 text-sm">(Precio normal)</span></td>
+                        </tr>
+                        <tr class="hover:bg-yellow-50 transition-colors resaltado">
+                            <td class="p-4 font-bold">🔥 PROMOCIÓN ESPECIAL 🔥</td>
+                            <td class="p-4 font-bold">
+                                Pague 1 Pollo en $40.000<br>
+                                ✅ SE LE OBSEQUIO MEDIO POLLO
+                            </td>
+                            <td class="p-4 text-right font-bold text-oscuro">$40.000</td>
+                        </tr>
+                        <tr class="hover:bg-yellow-50 transition-colors">
+                            <td class="p-4 font-medium">Medio Pollo</td>
+                            <td class="p-4">Mitad de pollo jugoso y sabroso</td>
+                            <td class="p-4 text-right font-bold">$8.500 <span class="text-gray-500 text-sm">| 2 medios = $17.000</span></td>
+                        </tr>
+                        <tr class="hover:bg-yellow-50 transition-colors">
+                            <td class="p-4 font-medium">Bandejitas</td>
+                            <td class="p-4">Porción lista para servir</td>
+                            <td class="p-4 text-right font-bold">$16.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="sopas" class="bg-white rounded-2xl p-6 md:p-8 sombra-suave mb-10">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-principal mb-6 flex items-center gap-3">
+                <i class="fa fa-fire"></i> Nuestras Sopas
+            </h2>
+            <div class="mb-8">
+                <h3 class="text-xl font-bold text-oscuro mb-4">📅 Horario de Servicio</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-yellow-50 p-5 rounded-xl border-l-4 border-principal">
+                        <h4 class="font-bold text-principal mb-2">Entre Semana</h4>
+                        <p>✅ Sopa de Ajiaco</p>
+                        <p>✅ Sopa de Menudencias</p>
+                    </div>
+                    <div class="bg-yellow-50 p-5 rounded-xl border-l-4 border-secundario">
+                        <h4 class="font-bold text-secundario mb-2">Fin de Semana</h4>
+                        <p>✅ Sopa de Ajiaco</p>
+                        <p>✅ Sopa de Menudencias</p>
+                        <p>✅ Sopa de Mondongo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-principal">
+                    <h3 class="text-xl font-bold mb-2">Sopa de Ajiaco</h3>
+                    <p class="text-gray-600 mb-3">Tradicional, con papas, guasca y sabor casero</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-principal">
+                    <h3 class="text-xl font-bold mb-2">Sopa de Menudencias</h3>
+                    <p class="text-gray-600 mb-3">Preparada con sazón especial y tradición</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-principal">
+                    <h3 class="text-xl font-bold mb-2">Sopa de Mondongo</h3>
+                    <p class="text-gray-600 mb-3">Receta tradicional, llena de sabor y nutrición</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bebidas" class="bg-white rounded-2xl p-6 md:p-8 sombra-suave mb-10">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-principal mb-6 flex items-center gap-3">
+                <i class="fa fa-glass"></i> Bebidas y Refrescos
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-principal">
+                    <h3 class="text-xl font-bold mb-4">🥤 Refrescos y Gaseosas</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>✅ Coca Cola</li>
+                        <li>✅ Manzana</li>
+                        <li>✅ Seven Up</li>
+                        <li>✅ Colombiana</li>
+                        <li>✅ Pepsi</li>
+                        <li>✅ Naranja</li>
+                        <li>✅ UVA</li>
+                        <li>✅ Agua (botellas)</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-secundario">
+                    <h3 class="text-xl font-bold mb-4">🍺 Cervezas</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>✅ Águila</li>
+                        <li>✅ Póker</li>
+                        <li>✅ Águila Light</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="promociones" class="bg-white rounded-2xl p-6 md:p-8 sombra-suave">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-principal mb-6 flex items-center gap-3">
+                <i class="fa fa-star"></i> Promociones Especiales
+            </h2>
+            <div class="resaltado p-8 rounded-xl border-2 border-secundario text-center">
+                <h3 class="text-2xl font-bold text-center text-oscuro mb-4">🔥 OFERTA DEL DÍA 🔥</h3>
+                <p class="text-xl font-bold mb-2">Pollo normal: $34.000</p>
+                <p class="text-xl font-bold mb-2">Promoción: Pague 1 Pollo en $40.000</p>
+                <p class="text-2xl font-bold text-principal mb-4">✅ SE LE OBSEQUIO MEDIO POLLO ✅</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-white py-6 px-4 mt-10 gradiente">
+        <p class="mb-2">© 2026 Sistema Mikali - Sede Simijaca</p>
+        <p class="opacity-90 text-sm">Sabor casero | Calidad garantizada | Lo mejor para ti</p>
+    </footer>
+
+</body>
+</html>
