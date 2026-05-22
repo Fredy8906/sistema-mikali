@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Mikali Sede Simijaca</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        principal: '#E63946',
+                        secundario: '#FFB703',
+                        oscuro: '#1D3557',
+                        claro: '#F1FAEE'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .sombra-suave {
+                box-shadow: 0 4px 15px rgba(230, 57, 70, 0.2);
+            }
+            .gradiente {
+                background: linear-gradient(135deg, #E63946 0%, #FF6B6B 100%);
+            }
+            .boton {
+                transition: all 0.3s ease;
+            }
+            .boton:hover {
+                transform: translateY(-3px);
+            }
+            .resaltado {
+                background: linear-gradient(135deg, #FFB703 0%, #FFD166 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-yellow-50 text-oscuro min-h-screen">
+
+    <header class="gradiente text-white py-6 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-2">
+                <i class="fa fa-cutlery"></i> Sistema Mikali Sede Simijaca
+            </h1>
+            <p class="opacity-90 text-lg">Sabor y calidad en cada plato | Tu mejor opción</p>
+            <span class="inline-block bg-white/20 px-4 py-2 rounded-full text-sm mt-3">
+                📍 Ubicación: Simijaca | 📞 Pedidos abiertos
+            </span>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8 -mt-8 relative z-10">
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <a href="#productos" class="boton bg-white rounded-2xl p-6 text-center sombra-suave cursor-pointer">
+                <i class="fa fa-th-large text-5xl text-principal mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Nuestros Productos</h3>
+                <p class="text-gray-600">Ver lo que ofrecemos</p>
+            </a>
+            <a href="#sopas" class="boton bg-white rounded-2xl p-6 text-center sombra-suave cursor-pointer">
+                <i class="fa fa-coffee text-5xl text-secundario mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Sopas del Día</h3>
+                <p class="text-gray-600">Conócenos nuestras preparaciones</p>
+            </a>
+            <a href="#promociones" class="boton bg-white rounded-2xl p-6 text-center sombra-suave cursor-pointer">
+                <i class="fa fa-tag text-5xl text-principal mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Promociones</h3>
+                <p class="text-gray-600">Ofertas especiales</p>
+            </a>
+        </section>
+
+        <section id="productos" class="bg-white rounded-2xl p-6 md:p-8 sombra-suave mb-10">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-principal mb-6 flex items-center gap-3">
+                <i class="fa fa-birthday-cake"></i> Nuestros Productos y Precios
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm md:text-base">
+                    <thead class="bg-principal text-white rounded-t-xl">
+                        <tr>
+                            <th class="p-4 text-left rounded-tl-xl">Producto</th>
+                            <th class="p-4 text-left">Descripción</th>
+                            <th class="p-4 text-right rounded-tr-xl">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-yellow-50 transition-colors">
+                            <td class="p-4 font-medium">Pollo Entero</td>
+                            <td class="p-4">Solo el pollo, sazonado y asado al punto</td>
+                            <td class="p-4 text-right font-bold">$34.000 <span class="text-gray-500 text-sm">(Precio normal)</span></td>
+                        </tr>
+                        <tr class="hover:bg-yellow-50 transition-colors resaltado">
+                            <td class="p-4 font-bold">🔥 PROMOCIÓN ESPECIAL 🔥</td>
+                            <td class="p-4 font-bold">
+                                Pague 1 Pollo en $40.000<br>
+                                ✅ SE LE OBSEQUIO MEDIO POLLO
+                            </td>
+                            <td class="p-4 text-right font-bold text-oscuro">$40.000</td>
+                        </tr>
+                        <tr class="hover:bg-yellow-50 transition-colors">
+                            <td class="p-4 font-medium">Medio Pollo</td>
+                            <td class="p-4">Mitad de pollo jugoso y sabroso</td>
+                            <td class="p-4 text-right font-bold">$8.500 <span class="text-gray-500 text-sm">| 2 medios = $17.000</span></td>
+                        </tr>
+                        <tr class="hover:bg-yellow-50 transition-colors">
+                            <td class="p-4 font-medium">Bandejitas</td>
+                            <td class="p-4">Porción lista para servir</td>
+                            <td class="p-4 text-right font-bold">$16.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="sopas" class="bg-white rounded-2xl p-6 md:p-8 sombra-suave mb-10">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-principal mb-6 flex items-center gap-3">
+                <i class="fa fa-fire"></i> Nuestras Sopas
+            </h2>
+            <div class="mb-8">
+                <h3 class="text-xl font-bold text-oscuro mb-4">📅 Horario de Servicio</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-yellow-50 p-5 rounded-xl border-l-4 border-principal">
+                        <h4 class="font-bold text-principal mb-2">Entre Semana</h4>
+                        <p>✅ Sopa de Ajiaco</p>
+                        <p>✅ Sopa de Menudencias</p>
+                    </div>
+                    <div class="bg-yellow-50 p-5 rounded-xl border-l-4 border-secundario">
+                        <h4 class="font-bold text-secundario mb-2">Fin de Semana</h4>
+                        <p>✅ Sopa de Ajiaco</p>
+                        <p>✅ Sopa de Menudencias</p>
+                        <p>✅ Sopa de Mondongo</p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-principal">
+                    <h3 class="text-xl font-bold mb-2">Sopa de Ajiaco</h3>
+                    <p class="text-gray-600 mb-3">Tradicional, con papas, guasca y sabor casero</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-principal">
+                    <h3 class="text-xl font-bold mb-2">Sopa de Menudencias</h3>
+                    <p class="text-gray-600 mb-3">Preparada con sazón especial y tradición</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-principal">
+                    <h3 class="text-xl font-bold mb-2">Sopa de Mondongo</h3>
+                    <p class="text-gray-600 mb-3">Receta tradicional, llena de sabor y nutrición</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bebidas" class="bg-white rounded-2xl p-6 md:p-8 sombra-suave mb-10">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-principal mb-6 flex items-center gap-3">
+                <i class="fa fa-glass"></i> Bebidas y Refrescos
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-principal">
+                    <h3 class="text-xl font-bold mb-4">🥤 Refrescos y Gaseosas</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>✅ Coca Cola</li>
+                        <li>✅ Manzana</li>
+                        <li>✅ Seven Up</li>
+                        <li>✅ Colombiana</li>
+                        <li>✅ Pepsi</li>
+                        <li>✅ Naranja</li>
+                        <li>✅ UVA</li>
+                        <li>✅ Agua (botellas)</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl border-l-4 border-secundario">
+                    <h3 class="text-xl font-bold mb-4">🍺 Cervezas</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>✅ Águila</li>
+                        <li>✅ Póker</li>
+                        <li>✅ Águila Light</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="promociones" class="bg-white rounded-2xl p-6 md:p-8 sombra-suave">
+            <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-principal mb-6 flex items-center gap-3">
+                <i class="fa fa-star"></i> Promociones Especiales
+            </h2>
+            <div class="resaltado p-8 rounded-xl border-2 border-secundario text-center">
+                <h3 class="text-2xl font-bold text-center text-oscuro mb-4">🔥 OFERTA DEL DÍA 🔥</h3>
+                <p class="text-xl font-bold mb-2">Pollo normal: $34.000</p>
+                <p class="text-xl font-bold mb-2">Promoción: Pague 1 Pollo en $40.000</p>
+                <p class="text-2xl font-bold text-principal mb-4">✅ SE LE OBSEQUIO MEDIO POLLO ✅</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-white py-6 px-4 mt-10 gradiente">
+        <p class="mb-2">© 2026 Sistema Mikali - Sede Simijaca</p>
+        <p class="opacity-90 text-sm">Sabor casero | Calidad garantizada | Lo mejor para ti</p>
+    </footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cali - Siempre en tu camino</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Estilos generales */
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Portada */
+        .portada {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imagenes/letrero-mi-cali.jpg') center/cover no-repeat;
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        .portada h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portada h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        /* Secciones */
+        .seccion {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            font-size: 2rem;
+            color: #d32f2f;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .titulo-seccion::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background: #d32f2f;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Promoción */
+        .promocion {
+            background: #fff3cd;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 3rem;
+            border: 2px solid #ffc107;
+        }
+
+        .promocion h3 {
+            color: #856404;
+            font-size: 1.5rem;
+        }
+
+        .precio-promocion {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-top: 0.5rem;
+        }
+
+        /* Productos */
+        .lista-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .producto-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .producto-card h4 {
+            color: #d32f2f;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .precio {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2e7d32;
+            margin: 1rem 0;
+        }
+
+        .imagen-producto {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        /* Bandejas completas */
+        .bandejas {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .bandejas h4 {
+            color: #d32f2f;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .precio-bandeja {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2e7d32;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .lista-incluye {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .lista-incluye li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .lista-incluye li::before {
+            content: '✓';
+            color: #2e7d32;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Bebidas */
+        .bebidas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .categoria-bebidas h4 {
+            color: #d32f2f;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Imágenes de referencia */
+        .galeria-imagenes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .galeria-imagenes img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Horarios y Contacto */
+        .info-contacto {
+            background: #f5f5f5;
+            padding: 3rem 2rem;
+        }
+
+        .contenedor-info {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .info-item h4 {
+            color: #d32f2f;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* Sobre Nosotros */
+        .sobre-nosotros {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Pie de página */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Botones de contacto */
+        .botones-contacto {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .boton {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        .boton-whatsapp:hover {
+            background: #128c7e;
+        }
+
+        .boton-llamada {
+            background: #d32f2f;
+            color: white;
+        }
+
+        .boton-llamada:hover {
+            background: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PORTADA -->
+    <section class="portada">
+        <h1>MI CALI</h1>
+        <h2>Siempre en tu camino</h2>
+        <p>Comida casera con el sabor que te gusta, hecha con cariño para ti y tu familia.</p>
+        <!-- Imagen de portada: letrero + pollo asado -->
+        <img src="imagenes/portada-mi-cali.jpg" alt="Letrero Mi Cali y pollo asado" style="width: 100%; max-width: 600px; margin-top: 2rem; border-radius: 10px;">
+    </section>
+
+    <!-- PRODUCTOS Y PRECIOS -->
+    <section class="seccion">
+        <h2 class="titulo-seccion">Nuestros Productos y Precios</h2>
+
+        <!-- PROMOCIÓN ESPECIAL -->
+        <div class="promocion">
+            <h3>🔥 PROMOCIÓN ESPECIAL 🔥</h3>
+            <p>Por la compra de 1 pollo entero, te regalamos 1 medio pollo ¡GRATIS!</p>
+            <p class="precio-promocion">Precio oferta: $40.000 COP</p>
+        </div>
+
+        <!-- POLLOS ASADOS -->
+        <div class="lista-productos">
+            <div class="producto-card">
+                <h4>Pollos Asados</h4>
+                <p>1 pollo entero completo</p>
+                <p class="precio">$34.000 COP</p>
+                <p>Oferta: 1 pollo entero + 1 medio pollo = $40.000 COP</p>
+                <!-- Imagen del horno y asador -->
+                <img src="imagenes/horno-asador.jpg" alt="Horno y asador de pollos" class="imagen-producto">
+            </div>
+
+            <!-- SOPAS -->
+            <div class="producto-card">
+                <h4>Sopas Caseras</h4>
+                <p>Tipos: Ajiaco, Menudencia o Mondongo</p>
+                <p class="precio">Sopa sola: $6.000 COP</p>
+                <p>Sopa + porción de arroz: $8.500 COP</p>
+                <!-- Imagen de sopa -->
+                <img src="imagenes/sopa.jpg" alt="Plato de sopa casera" class="imagen-producto">
+            </div>
+        </div>
+
+        <!-- BANDEJAS COMPLETAS -->
+        <div class="bandejas">
+            <h4>Bandejas Completas</h4>
+            <p class="precio-bandeja">$16.000 COP</p>
+            <p>Incluye todo lo siguiente, listo para servir:</p>
+            <ul class="lista-incluye">
+                <li>Sopa a elegir: Ajiaco, Menudencia o Mondongo</li>
+                <li>Porción de arroz</li>
+                <li>Porción de frijol</li>
+                <li>Porción de ensalada</li>
+                <li>1 cuarto de pollo (a elegir: ASADO o BROSTER)</li>
+                <li>Limonada de panela</li>
+                <li>Acompañamientos: Ají, salsa de tomate y miel</li>
+            </ul>
+            <!-- Imagen de bandeja completa -->
+            <img src="imagenes/bandeja-completa.jpg" alt="Bandeja completa servida" style="width: 100%; border-radius: 8px; margin-top: 2rem;">
+        </div>
+
+        <!-- BEBIDAS Y JUGOS -->
+        <div class="bebidas">
+            <div class="categoria-bebidas">
+                <h4>Jugos Naturales</h4>
+                <p>Variedad de jugos frescos y naturales</p>
+                <img src="imagenes/jugos-naturales.jpg" alt="Jugos naturales" class="imagen-producto">
+            </div>
+
+            <div class="categoria-bebidas">
+                <h4>Productos Postobón</h4>
+                <p>Manzana Colombiana, Seven Up, Pepsi, Cola y Pola</p>
+                <p>Presentaciones: personal y 1.5 litros</p>
+                <img src="imagenes/bebidas-postobon.jpg" alt="Productos Postobón" class="imagen-producto">
+            </div>
+
+            <div class="categoria-bebidas">
+                <h4>Productos Coca Cola</h4>
+                <p>Coca Cola</p>
+                <p>Presentaciones: personal (350 ml) y 1.5 litros</p>
+                <img src="imagenes/bebidas-cocacola.jpg" alt="Productos Coca Cola" class="imagen-producto">
+            </div>
+        </div>
+
+        <!-- Otras imágenes del negocio -->
+        <div class="galeria-imagenes">
+            <img src="imagenes/local-mi-cali.jpg" alt="Local de Mi Cali">
+            <img src="imagenes/pollo-asado.jpg" alt="Pollo asado jugoso">
+            <img src="imagenes/pollo-broster.jpg" alt="Pollo broster">
+        </div>
+    </section>
+
+    <!-- HORARIOS Y CONTACTO -->
+    <section class="info-contacto">
+        <h2 class="titulo-seccion">Horarios y Contacto</h2>
+        <div class="contenedor-info">
+            <div class="info-item">
+                <h4>🕒 Horarios de Atención</h4>
+                <p>Todos los días</p>
+                <p>De 11:00 a.m. a 10:00 p.m.</p>
+            </div>
+
+            <div class="info-item">
+                <h4>📍 Ubicación</h4>
+                <p>[DIRECCIÓN CORRECTA AQUÍ]</p>
+                <p>Barrio Carvajal, Bogotá D.C.</p>
+            </div>
+
+            <div class="info-item">
+                <h4>📞 Datos de Contacto</h4>
+                <p>Teléfono fijo: [TELÉFONO FIJO AQUÍ]</p>
+                <p>Celular / WhatsApp: [NÚMERO WHATSAPP AQUÍ]</p>
+            </div>
+        </div>
+
+        <!-- Botones de contacto -->
+        <div class="botones-contacto">
+            <a href="https://wa.me/[NÚMERO WHATSAPP SIN ESPACIOS]" class="boton boton-whatsapp">📲 Escribir por WhatsApp</a>
+            <a href="tel:[NÚMERO FIJO SIN ESPACIOS]" class="boton boton-llamada">📞 Llamar ahora</a>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="seccion">
+        <h2 class="titulo-seccion">Sobre Nosotros</h2>
+        <div class="sobre-nosotros">
+            <p>En <strong>Mi Cali</strong> nos dedicamos a preparar la mejor comida casera, con recetas tradicionales y los mejores ingredientes. Nuestra misión es llevar el sabor auténtico a tu mesa, para que disfrutes de un almuerzo o cena deliciosa, en cualquier momento.</p>
+            <p>Ven y conoce nuestro lugar, o haz tu pedido para llevar. ¡Te esperamos con el mejor sabor y la mejor atención!</p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Mi Cali - Todos los derechos reservados</p>
+        <p>Siempre en tu camino</p>
+    </footer>
+
+</body>
+</html>
+
+
+
+
